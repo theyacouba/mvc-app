@@ -18,4 +18,28 @@ class Model
 
         return $q->fetchAll();
     }
+
+    public function find(int $id): array
+    {
+        $database = new Database;
+        $pdo = $database->pdo();
+
+        $q = $pdo->prepare("SELECT * FROM $this->table WHERE id = :id");
+        $q->execute([
+            'id' => $id
+        ]);
+
+        return $q->fetch();
+    }
+
+    public function delete(int $id)
+    {
+        $database = new Database;
+        $pdo = $database->pdo();
+
+        $q = $pdo->prepare("DELETE FROM $this->table WHERE id = :id");
+        $q->execute([
+            'id' => $id
+        ]);
+    }
 }

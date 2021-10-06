@@ -13,4 +13,4 @@ $db->pdo();
 
 $post = new Post;
 
-var_dump($post->findAll());
+var_dump($post->delete(4));
