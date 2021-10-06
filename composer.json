@@ -1,0 +1,19 @@
+{
+    "name": "yacouba/mvc-app",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Models\\": "src/Models/",
+            "App\\Controllers\\": "src/Controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yacouba Keita",
+            "email": "theyacoubakeita@gmail.com"
+        }
+    ],
+    "require": {}
+}
